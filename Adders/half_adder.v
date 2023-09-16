@@ -1,10 +1,22 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Engineer: H Bharath Bhat
+// Company: 
+// Engineer: 
 // 
-// Create Date: 09/12/2023 03:18:50 PM
-// Design Name: 1 Bit Half Adder
+// Create Date: 09/07/2023 09:47:21 PM
+// Design Name: 
 // Module Name: half_adder
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
 //////////////////////////////////////////////////////////////////////////////////
 
 // Half Adder
