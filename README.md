@@ -1,4 +1,4 @@
-<p style="textalign: center" >
+<p style="text-align= center" >
 # RTL
 This Repository Contains:<br>
 · Adders<br>
