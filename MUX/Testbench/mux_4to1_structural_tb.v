@@ -5,7 +5,7 @@
 // Create Date: 09/12/2023 03:18:50 PM
 // Design Name: 4:1 Multiplexer Testbench
 // Module Name: mux_4to1_structural_tb
-// Description: Structural Description of 4:1 Multiplexer
+// Description: Testbench for Structural Description of 4:1 Multiplexer
 //////////////////////////////////////////////////////////////////////////////////
 
 
