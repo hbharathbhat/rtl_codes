@@ -1,22 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: H Bharath Bhat ( https://github.com/bhatbharath )
 // 
-// Create Date: 09/11/2023 08:17:04 PM
-// Design Name: 
+// Create Date: 09/12/2023 03:18:50 PM
+// Design Name: 16:1 Multiplexer
 // Module Name: mux_16to1_structural
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Description: Structural Description of 16:1 Multiplexer
 //////////////////////////////////////////////////////////////////////////////////
 
 
