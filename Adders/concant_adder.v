@@ -1,22 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: H Bharath Bhat
 // 
-// Create Date: 09/10/2023 11:07:17 PM
-// Design Name: 
+// Create Date: 09/12/2023 03:18:50 PM
+// Design Name: 8 Bit Adder Using Concantenation in Verilog
 // Module Name: concant_adder
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 //8-bit adder description
