@@ -1,22 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: H Bharath Bhat ( https://github.com/bhatbharath )
 // 
-// Create Date: 09/17/2023 11:14:29 PM
-// Design Name: 
+// Create Date: 09/12/2023 03:18:50 PM
+// Design Name: Priority Encoder
 // Module Name: priority_encoder_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Description: Testbench for Priority Encoder
 //////////////////////////////////////////////////////////////////////////////////
 
 
