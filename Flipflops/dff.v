@@ -1,22 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: H Bharath Bhat
 // 
-// Create Date: 09/17/2023 10:38:16 AM
-// Design Name: 
+// Create Date: 09/12/2023 03:18:50 PM
+// Design Name: D-Flipflop
 // Module Name: dff
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 
