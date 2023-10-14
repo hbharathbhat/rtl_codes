@@ -1,22 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: H Bharath Bhat ( https://github.com/bhatbharath )
 // 
-// Create Date: 09/11/2023 08:32:01 PM
-// Design Name: 
+// Create Date: 09/12/2023 03:18:50 PM
+// Design Name: 2:1 Multiplexer
 // Module Name: mux_2to1_behavioral
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Description: Behavioral Description of 2:1 Multiplexer
 //////////////////////////////////////////////////////////////////////////////////
 
 
