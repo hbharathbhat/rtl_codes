@@ -6,7 +6,7 @@ Waveform:
 
 Ripple Carry Adder:
 <p style="center">
-![ripple-carry-adder-4-bit](https://github.com/bhatbharath/RTL/assets/120124748/6445bf8b-3864-4a93-a676-94775c60adb4)
+  ![ripple-carry-adder-4-bit](https://github.com/bhatbharath/RTL/assets/120124748/6445bf8b-3864-4a93-a676-94775c60adb4)
 </p>
 Full Adder:
 
