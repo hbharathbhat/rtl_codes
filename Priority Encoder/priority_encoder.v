@@ -1,24 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: H Bharath Bhat ( https://github.com/bhatbharath )
 // 
-// Create Date: 09/17/2023 11:09:23 PM
-// Design Name: 
+// Create Date: 09/12/2023 03:18:50 PM
+// Design Name: Priority Encoder
 // Module Name: priority_encoder
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Description: Priority Encoder using Conditional Statements
 //////////////////////////////////////////////////////////////////////////////////
-
 
 module priority_encoder(in,code);
 input [7:0] in;
