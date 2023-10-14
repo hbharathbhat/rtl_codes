@@ -1,6 +1,9 @@
 ## RTL
 This Repository Contains:<br>
 · Adders<br>
+· Flipflops<br>
 · 2to1; 4to1; 16to1 MUX<br>
-· Simple Latch
+· Priority Encoders<br>
+· Simple Latch<br>
+
 </p>
