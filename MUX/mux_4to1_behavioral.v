@@ -1,24 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: H Bharath Bhat ( https://github.com/bhatbharath )
 // 
-// Create Date: 09/11/2023 08:14:40 PM
-// Design Name: 
+// Create Date: 09/12/2023 03:18:50 PM
+// Design Name: 4:1 Multiplexer
 // Module Name: mux_4to1_behavioral
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Description: Behavioral Description of 4:1 Multiplexer
 //////////////////////////////////////////////////////////////////////////////////
-
 
 module mux_4to1_behavioral(input [3:0] in, [1:0] sel, output reg out);
 
