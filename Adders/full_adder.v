@@ -1,10 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Engineer: H Bharath Bhat
+// Engineer: H Bharath Bhat  ( https://github.com/bhatbharath )
 // 
 // Create Date: 09/12/2023 03:18:50 PM
 // Design Name: 1 Bit Full Adder
 // Module Name: full_adder
+// Description: This is a structural Level Description of a 1 bit full adder
 //////////////////////////////////////////////////////////////////////////////////
 
 //Full_adder: Structural Description
