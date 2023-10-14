@@ -1,22 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: H Bharath Bhat ( https://github.com/bhatbharath )
 // 
-// Create Date: 09/11/2023 01:31:55 PM
-// Design Name: 
+// Create Date: 09/12/2023 03:18:50 PM
+// Design Name: 16:1 Multiplexer Testbench
 // Module Name: mux_16to1_behavioral_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Description: Testbench for Behavioral Description of 16:1 Multiplexer
 //////////////////////////////////////////////////////////////////////////////////
 
 
