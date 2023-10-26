@@ -5,10 +5,7 @@ Flipflops are Circuits that maintain a certain state unless and until directed b
 Types of Flipflops:
 <ul>
 <li>SR Flipflops</li>
-<li>D Flipflops</li>
 <li>JK Flipflops</li>
-
-
-
-
+<li>D Flipflops</li>
+<li>T Flipflops</li>
 </ul>
