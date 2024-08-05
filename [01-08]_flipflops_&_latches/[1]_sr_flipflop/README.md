@@ -7,6 +7,7 @@
 		<th>R</th>
 		<th>q+</th>
 		<th>qb+</th>
+		<th>Comments</th>
 	</thead>
 	<tbody>
 		<tr>
@@ -14,24 +15,28 @@
 			<td>0</td>
 			<td>q</td>
 			<td>qb</td>
+			<td>Initial State</td>
 		</tr>
 		<tr>
 			<td>0</td>
 			<td>1</td>
 			<td>0</td>
 			<td>1</td>
+			<td>Set</td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>0</td>
 			<td>1</td>
 			<td>0</td>
+			<td>Reset</td>
 		</tr>
 		<tr>
 			<td>1</td>
 			<td>1</td>
 			<td>U</td>
 			<td>U</td>
+			<td>Undefined</td>
 		</tr>
 	</tbody>
 </table>
