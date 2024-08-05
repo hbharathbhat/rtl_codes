@@ -3,35 +3,40 @@
 ## Full Adder
 <table align="center">
 	<thead>
-		<th>S</th>
-		<th>R</th>
-		<th>q+</th>
-		<th>qb+</th>
+		<th>a</th>
+		<th>b</th>
+		<th>cin+</th>
+		<th>sum</th>
+		<th>cout</th>
 	</thead>
 	<tbody>
 		<tr>
 			<td>0</td>
 			<td>0</td>
-			<td>q</td>
-			<td>qb</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
 		</tr>
 		<tr>
 			<td>0</td>
 			<td>1</td>
 			<td>0</td>
 			<td>1</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>0</td>
-			<td>1</td>
 			<td>0</td>
 		</tr>
 		<tr>
+			<td>0</td>
 			<td>1</td>
 			<td>1</td>
-			<td>U</td>
-			<td>U</td>
+			<td>0</td>
+			<td>1</td>
 		</tr>
 	</tbody>
 </table>
