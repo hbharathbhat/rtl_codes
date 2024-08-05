@@ -1,5 +1,5 @@
 # SR Flipflop
-<p>An SR Flip-Flop (Set-Reset Flip-Flop) is a fundamental building block in sequential logic circuits, used for storing binary data. It is a bi-stable circuit with two stable states, where the output can be set to logic 1 by applying logic 0 to the S input and reset to logic 0 by applying logic 0 to the R input. The basic SR Flip-Flop circuit consists of two gates connected in a positive feedback loop, ensuring that the output remains stable in one of the two states.</p>
+
 <p>It is a Flip Flop with two inputs, one is S and the other is R. S here stands for Set and R here stands for Reset. Set basically indicates set the flip flop which means output 1 and reset indicates resetting the flip flop which means output 0. Here, a clock pulse is supplied to operate this flip-flop, hence it is a clocked flip-flop.</p>
 <table>
 	<thead>
