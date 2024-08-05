@@ -69,3 +69,7 @@
 	</tbody>
 </table>
 
+### Waveforms
+![image](https://github.com/user-attachments/assets/95e557da-5d36-42a5-ac4c-b420232f3765)
+
+
