@@ -1,7 +1,7 @@
 # SR Flipflop
 
 <p>It is a Flip Flop with two inputs, one is S and the other is R. S here stands for Set and R here stands for Reset. Set basically indicates set the flip flop which means output 1 and reset indicates resetting the flip flop which means output 0. Here, a clock pulse is supplied to operate this flip-flop, hence it is a clocked flip-flop.</p>
-<table>
+<table  align="center">
 	<thead>
 		<th>S</th>
 		<th>R</th>
@@ -43,7 +43,7 @@
 
 ## Construction
 ### SR Flip Flop Construction using 2 NOR + 2 AND Gates
-![image](https://github.com/user-attachments/assets/58de03bc-fc82-4058-bf7e-f1f46b627d40)
+![image  align="center"](https://github.com/user-attachments/assets/58de03bc-fc82-4058-bf7e-f1f46b627d40)
 
 ### SR Flip Flop Construction using 4 NAND Gates
 ![image](https://github.com/user-attachments/assets/7681eec4-b90d-415e-8bf6-d5cc2c21b774)
