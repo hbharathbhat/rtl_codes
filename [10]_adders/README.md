@@ -1,6 +1,7 @@
-# SR Flipflop
+# Parallel Adder / Ripple Carry Adder
 
-<table>
+## Full Adder
+<table align="center">
 	<thead>
 		<th>S</th>
 		<th>R</th>
