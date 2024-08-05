@@ -5,11 +5,11 @@
 	<thead>
 		<th>a</th>
 		<th>b</th>
-		<th>cin+</th>
+		<th>cin</th>
 		<th>sum</th>
 		<th>cout</th>
 	</thead>
-	<tbody>
+	<tbody align="center">
 		<tr>
 			<td>0</td>
 			<td>0</td>
