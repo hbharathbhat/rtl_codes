@@ -47,7 +47,8 @@
 
 
 ### 32 bit ALU
-![image](https://github.com/user-attachments/assets/490a0bfc-5ec6-4aad-b137-82b7f0673071)
+![image](https://github.com/user-attachments/assets/91f798c8-b059-4f45-92bf-86e5e82fe8d5)
+
 
 
 
