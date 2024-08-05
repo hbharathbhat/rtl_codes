@@ -21,6 +21,7 @@ module sr_latch(
             if(rst)
                 q=1'b0; qb=1'b1;
             end
+            else
             case(sr)
                 2'b00:q=q;
                 2'b01:q=1'b0;
