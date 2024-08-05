@@ -1,7 +1,7 @@
 # D Flipflop
 
 <p>D flip flop is an electronic devices that is known as “delay flip flop” or “data flip flop” which is used to store single bit of data.D flip flops are synchronous or asynchronous. The clock single required for the synchronous version of D flip flops but not for the asynchronous one.The D flip flop has two inputs, data  and clock input which controls the flip flop. when clock input is high, the data is transferred to the output of the flip flop and when the clock input is low, the output of the flip flop is held in its previous state.</p>
-<table>
+<table  align="center">
 	<thead>
 		<th>D</th>
 		<th>q+</th>
