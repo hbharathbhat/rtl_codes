@@ -1,36 +1,42 @@
-# SR Flipflop
+# ALU
 
 <table>
 	<thead>
-		<th>S</th>
-		<th>R</th>
-		<th>q+</th>
-		<th>qb+</th>
+		<th>f</th>
+		<th>Operation</th>
 	</thead>
 	<tbody>
 		<tr>
-			<td>0</td>
-			<td>0</td>
-			<td>q</td>
-			<td>qb</td>
+			<td>000</td>
+			<td>a & b</td>
 		</tr>
 		<tr>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-			<td>1</td>
+			<td>001</td>
+			<td>a | b</td>
 		</tr>
 		<tr>
-			<td>1</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
+			<td>010</td>
+			<td>~(a & b)</td>
 		</tr>
 		<tr>
-			<td>1</td>
-			<td>1</td>
-			<td>U</td>
-			<td>U</td>
+			<td>011</td>
+			<td>~(a | b)</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>a + b</td>
+		</tr>
+		<tr>
+			<td>101</td>
+			<td>a - b</td>
+		</tr>
+		<tr>
+			<td>110</td>
+			<td>a * b</td>
+		</tr>
+		<tr>
+			<td>111</td>
+			<td>a / b</td>
 		</tr>
 	</tbody>
 </table>
