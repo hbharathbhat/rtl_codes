@@ -1,4 +1,4 @@
-# SR Flipflop
+# T Flipflop
 
 <table align="center">
 	<thead>
