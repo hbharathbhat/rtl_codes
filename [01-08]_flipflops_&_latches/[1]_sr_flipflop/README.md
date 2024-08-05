@@ -43,7 +43,7 @@
 
 ## Construction
 ### SR Flip Flop Construction using 2 NOR + 2 AND Gates
-![image  align="center"](https://github.com/user-attachments/assets/58de03bc-fc82-4058-bf7e-f1f46b627d40)
+![image](https://github.com/user-attachments/assets/58de03bc-fc82-4058-bf7e-f1f46b627d40)
 
 ### SR Flip Flop Construction using 4 NAND Gates
 ![image](https://github.com/user-attachments/assets/7681eec4-b90d-415e-8bf6-d5cc2c21b774)
