@@ -41,3 +41,11 @@
 	</tbody>
 </table>
 
+## Waveforms
+### 8 bit ALU
+
+### 32 bit ALU
+![image](https://github.com/user-attachments/assets/490a0bfc-5ec6-4aad-b137-82b7f0673071)
+
+
+
