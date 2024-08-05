@@ -8,7 +8,7 @@
 	<tbody>
 		<tr>
 			<td>000</td>
-			<td style="text-align: center>a & b</td>
+			<td align="center">a & b</td>
 		</tr>
 		<tr>
 			<td>001</td>
