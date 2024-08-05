@@ -37,3 +37,4 @@
 
 ### References
 <a href="https://www.geeksforgeeks.org/d-flip-flop/">GeeksforGeeks</a>
+<a href="https://www.javatpoint.com/d-flip-flop-in-digital-electronics">Javatpoint</a>
