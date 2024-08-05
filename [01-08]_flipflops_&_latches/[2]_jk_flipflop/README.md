@@ -1,6 +1,6 @@
 # JK Flipflop
 
-<p>t is one kind of sequential logic circuit which stores binary information in bitwise manner. It consists of two inputs and two outputs. Inputs are Set(J) & Reset(K) and their corresponding outputs are Q and Q’. JK flipflop has two modes of operation which are synchronous mode and asynchronous mode. In synchronous mode, the state will be changed with the clock(clk) signal, and in asynchronous mode, the change of state is independent from its clock signal.</p>
+<p>It is one kind of sequential logic circuit which stores binary information in bitwise manner. It consists of two inputs and two outputs. Inputs are Set(J) & Reset(K) and their corresponding outputs are Q and Q’. JK flipflop has two modes of operation which are synchronous mode and asynchronous mode. In synchronous mode, the state will be changed with the clock(clk) signal, and in asynchronous mode, the change of state is independent from its clock signal.</p>
 
 <table>
 	<thead>
