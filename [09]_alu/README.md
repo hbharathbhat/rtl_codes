@@ -7,35 +7,39 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>000</td>
+			<td>0000</td>
 			<td align="center">a & b</td>
 		</tr>
 		<tr>
-			<td>001</td>
+			<td>0001</td>
 			<td align="center">a | b</td>
 		</tr>
 		<tr>
-			<td>010</td>
+			<td>0010</td>
 			<td align="center">~(a & b)</td>
 		</tr>
 		<tr>
-			<td>011</td>
+			<td>0011</td>
 			<td align="center">~(a | b)</td>
 		</tr>
 		<tr>
-			<td>100</td>
+			<td>0100</td>
+			<td align="center">a ^ b</td>
+		</tr>
+		<tr>
+			<td>0101</td>
 			<td align="center">a + b</td>
 		</tr>
 		<tr>
-			<td>101</td>
+			<td>0110</td>
 			<td align="center">a - b</td>
 		</tr>
 		<tr>
-			<td>110</td>
+			<td>0111</td>
 			<td align="center">a * b</td>
 		</tr>
 		<tr>
-			<td>111</td>
+			<td>1000</td>
 			<td align="center">a / b</td>
 		</tr>
 	</tbody>
