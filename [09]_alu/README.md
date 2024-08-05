@@ -1,5 +1,5 @@
 # ALU
-
+<p>It is a digital circuit that performs logical, arithmetic, and shift operations.</p>
 <table>
 	<thead>
 		<th>f</th>
