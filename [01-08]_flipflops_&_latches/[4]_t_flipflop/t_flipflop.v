@@ -15,6 +15,7 @@ begin
     begin
         q=1'b0; qb=1'b1;
     end
+    else
     case(t)
         1'b0:q=1'b1;
         1'b1:q=1'b0;
