@@ -43,6 +43,8 @@
 
 ## Waveforms
 ### 8 bit ALU
+![image](https://github.com/user-attachments/assets/93947066-a762-4da9-be8a-0fba611e998e)
+
 
 ### 32 bit ALU
 ![image](https://github.com/user-attachments/assets/490a0bfc-5ec6-4aad-b137-82b7f0673071)
