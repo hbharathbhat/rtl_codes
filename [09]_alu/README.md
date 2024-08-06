@@ -47,7 +47,8 @@
 		</tr>
 	</tbody>
 </table>
-## Waveforms
+### Waveforms
+
 ![image](https://github.com/user-attachments/assets/93947066-a762-4da9-be8a-0fba611e998e)
 
 
@@ -92,7 +93,8 @@
 		</tr>
 	</tbody>
 </table>
-## Waveforms
+### Waveforms
+
 ![image](https://github.com/user-attachments/assets/91f798c8-b059-4f45-92bf-86e5e82fe8d5)
 
 
