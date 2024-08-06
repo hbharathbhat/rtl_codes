@@ -55,9 +55,7 @@
 
 ## Construction
 ### Using NAND Gates
-![image](https://github.com/user-attachments/assets/98ab049a-ad51-4c2f-bb33-aa957394133d)
-### Using NOR Gates
-![image](https://github.com/user-attachments/assets/e61cb20c-8a70-4356-bcbf-d24a7a88c1b6)
+![image](https://github.com/user-attachments/assets/98ab049a-ad51-4c2f-bb33-aa957394133d) ![image](https://github.com/user-attachments/assets/e61cb20c-8a70-4356-bcbf-d24a7a88c1b6)
 
 
 ## Waveforms
