@@ -1,5 +1,5 @@
 # SR Latch
-<p>Latches are digital circuits that store a single bit of information and hold its value until it is updated by new input signals. They are used in digital systems as temporary storage elements to store binary information.</p>
+<p>S-R latches i.e., Set-Reset latches are the simplest form of latches and are implemented using two inputs: S (Set) and R (Reset). The S input sets the output to 1, while the R input resets the output to 0. When both S and R inputs are at 1, the latch is said to be in an “undefined” state. </p>
 <table align="center">
 	<thead>
 		<th>en</th>
