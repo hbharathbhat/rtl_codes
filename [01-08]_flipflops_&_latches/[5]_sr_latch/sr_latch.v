@@ -13,7 +13,7 @@ module sr_latch(
     
    reg [1:0] sr;
    
-   always@(*)
+   always@(s or r or en or rst)
    begin
         sr={s,r};
         if(en)
