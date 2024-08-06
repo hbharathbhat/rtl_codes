@@ -3,6 +3,8 @@
 <p>It is a Flip Flop with two inputs, one is S and the other is R. S here stands for Set and R here stands for Reset. Set basically indicates set the flip flop which means output 1 and reset indicates resetting the flip flop which means output 0. Here, a clock pulse is supplied to operate this flip-flop, hence it is a clocked flip-flop.</p>
 <table  align="center">
 	<thead>
+		<th>clk</th>
+		<th>rst</th>
 		<th>S</th>
 		<th>R</th>
 		<th>q+</th>
@@ -11,6 +13,8 @@
 	</thead>
 	<tbody>
 		<tr>
+			<td>↑</td>
+			<td>0</td>
 			<td>0</td>
 			<td>0</td>
 			<td>q</td>
@@ -18,6 +22,8 @@
 			<td>Initial State</td>
 		</tr>
 		<tr>
+			<td>↑</td>
+			<td>0</td>
 			<td>0</td>
 			<td>1</td>
 			<td>0</td>
@@ -25,6 +31,8 @@
 			<td>Set</td>
 		</tr>
 		<tr>
+			<td>↑</td>
+			<td>0</td>
 			<td>1</td>
 			<td>0</td>
 			<td>1</td>
@@ -32,6 +40,8 @@
 			<td>Reset</td>
 		</tr>
 		<tr>
+			<td>↑</td>
+			<td>0</td>
 			<td>1</td>
 			<td>1</td>
 			<td>U</td>
