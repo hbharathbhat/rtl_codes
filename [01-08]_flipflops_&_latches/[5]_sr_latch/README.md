@@ -1,5 +1,5 @@
 # SR Latch
-
+<p>Latches are digital circuits that store a single bit of information and hold its value until it is updated by new input signals. They are used in digital systems as temporary storage elements to store binary information.</p>
 <table align="center">
 	<thead>
 		<th>en</th>
