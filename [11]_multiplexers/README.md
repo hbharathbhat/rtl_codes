@@ -1,6 +1,6 @@
-# SR Flipflop
+# Multiplexers
 
-<table>
+<!--<table>
 	<thead>
 		<th>S</th>
 		<th>R</th>
@@ -33,5 +33,10 @@
 			<td>U</td>
 		</tr>
 	</tbody>
-</table>
+</table>-->
+
+## Waveforms
+### 8:1 MUX
+![image](https://github.com/user-attachments/assets/8a15149e-21e4-4350-a127-66ff9c6f0a4f)
+
 
