@@ -1,49 +1,13 @@
 # Priority Encoder
-<p>It is a digital circuit that performs logical, arithmetic, and shift operations.</p>
+<p>An encoder is a digital combinational circuit that converts a human friendly information into a coded format for processing using machines. In simple words, an encoder converts a piece of information normal form to coded form. This process is called encoding.</p>
+<p>An encoder consists of a certain number of input and output lines. Where, an encoder can have maximum of "2n" input lines whereas "n" output lines. Hence, an encoder encodes information represented by "2n" input lines with "n" bits.</p>
 
+### Block Diagram
+![image](https://github.com/user-attachments/assets/cb87244c-521f-4a28-a3cc-5028610f1a17)
 
-## 8 bit ALU
-<table>
-	<thead>
-		<th>Inputs</th>
-		<th>Outputs</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>00000001</td>
-			<td align="center">000</td>
-		</tr>
-  		<tr>
-			<td>00000010</td>
-			<td align="center">001</td>
-		</tr>
-  		<tr>
-			<td>00000100</td>
-			<td align="center">010</td>
-		</tr>
-  		<tr>
-			<td>00001000</td>
-			<td align="center">011</td>
-		</tr>
- 		<tr>
-			<td>00010000</td>
-			<td align="center">100</td>
-		</tr>
-  		<tr>
-			<td>00100000</td>
-			<td align="center">101</td>
-		</tr>
-  		<tr>
-			<td>01000000</td>
-			<td align="center">110</td>
-		</tr>
-  		<tr>
-			<td>10000000</td>
-			<td align="center">111</td>
-		</tr>
-		
-	</tbody>
-</table>
+### Truth Table
+![image](https://github.com/user-attachments/assets/022ac31b-735b-4682-968a-b693c35503e9)
+
 ### Waveforms
 
 ![image](https://github.com/user-attachments/assets/1256a85b-8276-41c8-881b-5fe843f1d560)
