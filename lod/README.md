@@ -1,6 +1,6 @@
-# SR Flipflop
+# Leading one Detector
 
-<table>
+<!--<table>
 	<thead>
 		<th>S</th>
 		<th>R</th>
@@ -33,5 +33,5 @@
 			<td>U</td>
 		</tr>
 	</tbody>
-</table>
+</table>-->
 
