@@ -1,0 +1,19 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Engineer: Supreeth Nadig
+// Create Date: 09/21/2023 08:01:21 PM
+// Design Name: PIPO
+// Module Name: PIPO1
+// Project Name: PIPO
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module PIPO1(dout,din,ld,clk);
+input [15:0] din;
+input ld, clk;
+output reg [15:0] dout;
+
+always@(posedge clk)
+if(ld) dout<=din;
+
+endmodule
