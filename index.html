@@ -1,0 +1,743 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Verilog</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="98e244ae-93ec-4472-8f77-9bb24e669714" class="page sans"><header><img class="page-cover-image" src="Verilog%2098e244ae93ec44728f779bb24e669714/verilog_notion_header.png" style="object-position:center 42.620000000000005%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/computer-chip_gray.svg"/></div><h1 class="page-title">Verilog</h1><p class="page-description"></p></header><div class="page-body"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Contents</summary><div class="indented"><nav id="4c288d57-94a2-43ee-970a-fd9c20bf6e64" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c456e31f-5619-41ff-80cc-ec0a6aaba12b">Contents</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c8addfe3-c0ef-4e46-a1db-eac0c42804bc">Verilog HDL Overview</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8a01ad7d-477a-4607-90b4-60c6709fbe0b">Terminologies</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#447be05b-f734-43b2-a3b6-619914492415">Behavior Modelling</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#65c658f9-9508-4302-9b6f-566021aed193">Structural Modelling</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#170e0038-5651-4e67-90f1-40282c05225b">Typical RTL Synthesis &amp; RTL Simulation Flows</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c7f5f1d7-22af-4623-9a25-d405e067b054">Module Structure</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c7da99af-a13a-4866-8a2c-ae93986bd472">Verilog - Basic Modeling Structure</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#df74714e-bb7d-40cc-9347-21cc122a1e40">Verilog HDL: Demonstration Example</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#9b4bcdfc-dbb8-4ac5-898d-c63e9fe9e497">Module Declaration </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#6df5516d-1523-4d6d-b942-23d32728f89e">Port types</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ed0561c9-4fd0-4c3a-b293-1cda25627d08">Data Types</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#76ac8175-2692-4290-9fb6-5b54852a05f0">Net Data types</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#6f48a814-46f2-4143-821b-4c2679a4c45b">Variable Data types</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#02115e51-55aa-41bb-9c8f-bb627e37eee1">Parameters</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0627c797-f478-4b7f-bdf9-7b3168bf21de">Instantiation Formats</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#927fb144-2da3-4949-a3b9-772fdf8033f1">Connecting Module instantiation ports</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#af39c11c-700b-4366-a497-b66bca756923">Requirements for port connection when modules are instantiated</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b0398245-9cf5-45ce-add6-d5c2aa8f1f5c">Assigning values - Numbers</a></div></nav></div></details><hr id="0dbd33db-faee-4366-b2a9-f72b386723bb"/><h1 id="c8addfe3-c0ef-4e46-a1db-eac0c42804bc" class="">Verilog HDL Overview</h1><ul id="01536d17-2246-4366-9690-6276a1748f3b" class="bulleted-list"><li style="list-style-type:disc">IEEE industry standard Hardware Description Language (HDL) - used to describe a digital system.</li></ul><ul id="e02cf9d0-4eaf-4843-befc-bd36a62459cc" class="bulleted-list"><li style="list-style-type:disc">Use in both hardware simulation and synthesis.</li></ul><ul id="ab781419-2124-4686-a33e-ee808ff26f16" class="bulleted-list"><li style="list-style-type:disc">Introduced in 1984 by Gateway Design Automation.</li></ul><ul id="6892dac4-e9f6-4ff7-839a-7f58b9d8ecf5" class="bulleted-list"><li style="list-style-type:disc">1989 Cadence purchased Gateway and subsequently released Verilog to the public.</li></ul><ul id="817ec4a7-633f-4f79-8820-180f47847ec0" class="bulleted-list"><li style="list-style-type:disc">Open Verilog International (OVI) was formed to control the language specifications.</li></ul><ul id="1d6986b0-7d1e-4a61-9d48-caf3533b6d69" class="bulleted-list"><li style="list-style-type:disc">1995 IEEE accepted OVI Verilog as Standard</li></ul><ul id="3afba0bc-7d87-486c-a1c2-2c93bc6448bf" class="bulleted-list"><li style="list-style-type:disc">2001 and 2005 IEEE revised standard.</li></ul><ul id="fcfe2f53-d485-4511-bfc2-a7b375dfe0be" class="bulleted-list"><li style="list-style-type:disc">2009 merged with SystemVerilog becoming IEEE standard 1800-2009</li></ul><h2 id="8a01ad7d-477a-4607-90b4-60c6709fbe0b" class="">Terminologies</h2><ol type="1" id="ca2cbf4d-ffc0-44f0-96a7-bd109214ceaf" class="numbered-list" start="1"><li>HDL: A text based programming language that is used to model a piece of hardware.</li></ol><ol type="1" id="06c604c6-3894-44f4-9de8-d937a1d51c9f" class="numbered-list" start="2"><li>Behavior Modeling: A component is described by its input/output response.</li></ol><ol type="1" id="4d83b274-7659-4085-9bcf-69beef88847e" class="numbered-list" start="3"><li>Structural Modeling: A component is described by interconnecting lower-level components/primitives.</li></ol><ol type="1" id="98d49c67-fa20-4440-a88c-f777c1dfb5d8" class="numbered-list" start="4"><li>Register Transfer Level (RTL) : A type of behavioral modeling, for the purpose of synthesis.<ol type="a" id="f7af27dd-85a5-4364-a4b7-a20561fff3e1" class="numbered-list" start="1"><li>Hardware is implied or inferred.</li></ol><ol type="a" id="26028453-056c-41a2-acad-c9faf17f1d30" class="numbered-list" start="2"><li>Synthesizable</li></ol></li></ol><ol type="1" id="ca0b19f6-b8f8-445e-99c0-88d162b051ec" class="numbered-list" start="5"><li>Synthesis: Translating HDL to a circuit and then optimizing the represented circuit.</li></ol><ol type="1" id="282277b0-72b3-45a2-ad2e-982c9599fb09" class="numbered-list" start="6"><li>RTL Synthesis: Translating a RTL model of hardware into an optimized technology specific gate level implementation.</li></ol><figure id="6b3d1040-2855-449a-8956-532e93d52b57" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image.png"><img style="width:708px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image.png"/></a><figcaption>RTL Synthesis</figcaption></figure><h2 id="447be05b-f734-43b2-a3b6-619914492415" class="">Behavior Modelling</h2><ul id="04953f5d-379e-46bd-940c-1788848ceb48" class="bulleted-list"><li style="list-style-type:disc">Only the functionality of the circuit, no structure is mentioned.</li></ul><ul id="4c3d0406-8376-4d6d-af17-254ccceb4e9d" class="bulleted-list"><li style="list-style-type:disc">Synthesis tool creates correct logic.</li></ul><figure id="8e9bf7ab-7694-42af-a6a0-058e0dfd7a32" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image%201.png"><img style="width:931px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image%201.png"/></a></figure><h2 id="65c658f9-9508-4302-9b6f-566021aed193" class="">Structural Modelling</h2><ul id="640c8c34-1447-4cec-b7cb-df197d43f650" class="bulleted-list"><li style="list-style-type:disc">Functionality and structure of the circuit.</li></ul><ul id="115935fe-5d8d-43da-8b48-c4248e8c6211" class="bulleted-list"><li style="list-style-type:disc">Call out the specific hardware.</li></ul><figure id="72c9b8fb-bcf6-40e6-8085-0c3a5ac12994" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image%202.png"><img style="width:599px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image%202.png"/></a></figure><h2 id="170e0038-5651-4e67-90f1-40282c05225b" class="">Typical RTL Synthesis &amp; RTL Simulation Flows</h2><figure id="b0ff3358-2eee-4be8-bfef-adbfc4a18069" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image%203.png"><img style="width:892px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image%203.png"/></a><figcaption>Typical RTL Synthesis &amp; RTL Simulation Flows</figcaption></figure><hr id="a4af981e-027f-4592-b591-d9fa56c37acd"/><h1 id="c7f5f1d7-22af-4623-9a25-d405e067b054" class="">Module Structure</h1><h2 id="c7da99af-a13a-4866-8a2c-ae93986bd472" class="">Verilog - Basic Modeling Structure</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7f8b125d-6cdb-49fd-bb71-12bbf350b8d0" class="code"><code class="language-Verilog">module module_name(port_list);
+	port_declaration;
+	data_type_declarations;
+	circuit_functionality;
+	timing specifications;
+endmodule</code></pre><p id="fccdc059-f82c-4ef1-a0b3-32bdbf292768" class="">
+</p><ul id="a1d257f5-d567-4599-ae2a-58bc20b881a3" class="bulleted-list"><li style="list-style-type:disc">Begins with keyword <strong>module</strong> and ends with keyword <strong>endmodule</strong></li></ul><ul id="4f844fc1-23c6-468c-bd2c-3f01c2913e32" class="bulleted-list"><li style="list-style-type:disc">Case sensitive</li></ul><ul id="56b486a5-8610-4e0d-8943-56fceecdf8b7" class="bulleted-list"><li style="list-style-type:disc">All keywords are lowercase</li></ul><ul id="19950339-3269-48be-ad3a-7027e5f36ae2" class="bulleted-list"><li style="list-style-type:disc">Whitespace(insensitive) is used for readability.</li></ul><ul id="ae254dd1-d350-4bb8-9818-92c88561f358" class="bulleted-list"><li style="list-style-type:disc">Semicolon (;) is the statement terminator.</li></ul><ul id="146c7364-2d29-4453-860f-dc04c8792c43" class="bulleted-list"><li style="list-style-type:disc">// : Single line comment</li></ul><ul id="6138ea14-1082-486e-aba3-93e25576529f" class="bulleted-list"><li style="list-style-type:disc">/* … */ Multi-line comment </li></ul><ul id="45efa095-293d-48ba-9409-3436e4eb9174" class="bulleted-list"><li style="list-style-type:disc">Timing specification is only for simulation purpose</li></ul><h2 id="df74714e-bb7d-40cc-9347-21cc122a1e40" class="">Verilog HDL: Demonstration Example</h2><figure id="90ff56f6-34ac-46ff-b674-00a3e513e97a" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image%204.png"><img style="width:842px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image%204.png"/></a><figcaption>Verilog HDL: Demonstration Example</figcaption></figure><h3 id="9b4bcdfc-dbb8-4ac5-898d-c63e9fe9e497" class="">Module Declaration </h3><ul id="1e50e26b-27fe-4103-b044-ab3c1acad9bc" class="bulleted-list"><li style="list-style-type:disc">Begins with keyword <strong>module</strong></li></ul><ul id="3a04b28c-083d-4060-ad95-73473f8bd941" class="bulleted-list"><li style="list-style-type:disc">Provides module name</li></ul><ul id="6232f229-0bf8-4a40-948c-fa169d9aa1a7" class="bulleted-list"><li style="list-style-type:disc">Includes port list, if any</li></ul><h3 id="6df5516d-1523-4d6d-b942-23d32728f89e" class="">Port types</h3><ul id="617abab3-db90-4382-8db9-2cd9227476bd" class="bulleted-list"><li style="list-style-type:disc">input - input ports</li></ul><ul id="401a8e5c-b8c9-4129-802d-a20dbc844bc5" class="bulleted-list"><li style="list-style-type:disc">output - output ports</li></ul><ul id="2deff2ca-7963-4b49-8c7c-94e112533566" class="bulleted-list"><li style="list-style-type:disc">inout - bidirectional port</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="75761c74-6d94-4b4b-9e88-9848c3bce777" class="code"><code class="language-Markdown">&lt;port_type&gt; &lt;port_name&gt;;</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="49bc2b36-b7bc-4e24-ae31-ce46a55f4af3" class="code"><code class="language-Verilog">module full_adder(a, b, cin, sum, cout);
+	input a, b, cin;
+	output sum, cout;
+	
+	...
+	
+endmodule</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="570d99c5-9977-40a0-8323-b897c4e91961" class="code"><code class="language-Verilog">module adder(a, b, cin, sum, cout);
+	input [3:0] a, b; // declares 4-bit input port a, b
+	input cin;
+	output [3:0] sum; // declares 4-bit output port sum
+	output cout;
+	wire c0, c1, c2;
+	
+	...
+endmodule</code></pre><ul id="6b484b27-8b94-4724-a337-9e44977fac6e" class="bulleted-list"><li style="list-style-type:disc">Post 2001 &amp; later module/port declaration</li></ul><ul id="7d21387d-505f-44cf-9a62-d97072ffc25c" class="bulleted-list"><li style="list-style-type:disc">Beginning in Verilog-2001, module and port declarations can be combined.<ul id="e5d501b2-363c-4761-be77-e07be9d88bc6" class="bulleted-list"><li style="list-style-type:circle">More concise declaration section.</li></ul><ul id="e320eba5-590a-4676-8e9f-9bd105df637b" class="bulleted-list"><li style="list-style-type:circle">Parameters may also be included.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="88494f59-678a-4e80-91e3-9a5baf10442c" class="code"><code class="language-Verilog">module adder(
+	input [3:0] a, b, // declares 4-bit input port a, b
+	input cin,
+	output [3:0] sum, // declares 4-bit output port sum
+	output cout
+	);
+	wire c0, c1, c2;
+	
+	...
+endmodule</code></pre><h2 id="ed0561c9-4fd0-4c3a-b293-1cda25627d08" class="">Data Types</h2><ul id="7c88137d-f9ad-4d97-b88c-ecef3afc8b7c" class="bulleted-list"><li style="list-style-type:disc">Net Data type: represents physical interconnect between structures (activity flows)</li></ul><figure id="ff731ade-8ea3-4afe-9d27-c8ce28f59715" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image%205.png"><img style="width:690px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image%205.png"/></a></figure><ul id="56d9ac74-61d8-49e5-ae23-01bb04130601" class="bulleted-list"><li style="list-style-type:disc">Variable data type: represents element to store data temporarily.</li></ul><p id="522a6090-b59a-486f-9a4f-f9a73b8f51da" class="">
+</p><figure id="2617506e-1da1-4d96-a60a-e2047dd6b152" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image%206.png"><img style="width:357px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image%206.png"/></a></figure><h3 id="76ac8175-2692-4290-9fb6-5b54852a05f0" class="">Net Data types</h3><table id="85f9f569-952c-40c6-a1c8-13bbc19d2cf6" class="simple-table"><tbody><tr id="48fbe872-e29b-4b13-81d9-9a77142dbeb1"><td id="h?fn" class=""><strong>Type</strong></td><td id="E]DV" class=""><strong>Definition</strong></td></tr><tr id="a429cc22-8b87-4a38-9319-2c83dd5ff94b"><td id="h?fn" class="">wire</td><td id="E]DV" class="">Represents a node or a connection</td></tr><tr id="877667c2-8d8e-416f-bba3-d0057a4ce39f"><td id="h?fn" class="">tri</td><td id="E]DV" class="">Represents a tri-state node</td></tr><tr id="9ea0ba1b-595e-4fd8-aec5-af1e95eb0e51"><td id="h?fn" class="">supply0, supply1 </td><td id="E]DV" class="">logic 0; logic 1</td></tr></tbody></table><ul id="6cea4727-ba5d-4c58-b23b-c3ad1eb88aee" class="bulleted-list"><li style="list-style-type:disc">Bus Declarations:</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5d44c8ce-fff2-4f1e-b138-83c7fb005580" class="code"><code class="language-Markdown">&lt;data_type&gt; [MSB:LSB] &lt;signal_name&gt;;
+&lt;data_type&gt; [LSB:MSB] &lt;signal_name&gt;;</code></pre><h3 id="6f48a814-46f2-4143-821b-4c2679a4c45b" class="">Variable Data types</h3><ul id="2a97f9a9-ac09-454d-93d9-f57345772b10" class="bulleted-list"><li style="list-style-type:disc"><strong>reg</strong>: unsigned variable of any bit size.<ul id="2dcbdb24-4ad0-4f7e-9c2b-2a8a82234ffc" class="bulleted-list"><li style="list-style-type:circle"><strong>reg signed</strong> is used for signed implementation.</li></ul></li></ul><ul id="cf599df2-aabc-4246-86c2-2458d6c2527a" class="bulleted-list"><li style="list-style-type:disc"><strong>integer</strong>: signed 32-bit variable.</li></ul><ul id="481f42ae-0180-4784-b0dc-3d901d200601" class="bulleted-list"><li style="list-style-type:disc"><strong>real, realtime, time</strong>: no synthesis support, only simulation.</li></ul><p id="a9838a81-7bf1-4c96-8b8c-28cb6d82b95f" class="">
+</p><ul id="8bb45654-9481-4989-b6fc-ba1a2b3ffa29" class="bulleted-list"><li style="list-style-type:disc">Can be assigned only within a procedure, a task or a function.</li></ul><ul id="7baf9c4f-bf96-4839-b688-770a54fb41a7" class="bulleted-list"><li style="list-style-type:disc">Bus declarations</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f35a696c-9f03-4df9-b4c6-cb12ee066a6f" class="code"><code class="language-Markdown">reg [MSB:LSB] &lt;signal_name&gt;;
+integer count;</code></pre><h3 id="02115e51-55aa-41bb-9c8f-bb627e37eee1" class="">Parameters</h3><ul id="8cf87522-572a-4276-8167-256edd67e768" class="bulleted-list"><li style="list-style-type:disc">Value assigned t a symbolic name.</li></ul><ul id="b8a7a861-f9a6-421a-a44c-2869e7fda4fd" class="bulleted-list"><li style="list-style-type:disc">Must resolve to a constant at compile time.</li></ul><ul id="eb368a47-afdc-42fa-a6e0-a3aa12fb0c0a" class="bulleted-list"><li style="list-style-type:disc">Can be overwritten at a compile time.</li></ul><ul id="01c0c5bc-b665-4e59-81b6-1499253ca5d9" class="bulleted-list"><li style="list-style-type:disc"><strong>localparam: </strong>same as parameter but cannot be overwritten.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="07a1384c-ed75-41df-b899-9f071dd095b1" class="code"><code class="language-Verilog">parameter size = 8;
+localparam outsize = 16;
+reg [size-1:0] data_a, data_b;
+reg [outsize-1:0] out;</code></pre><ul id="463624f3-2457-4ead-af8a-9a847ce64909" class="bulleted-list"><li style="list-style-type:disc">Verilog-2001 style, include with module declaration.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="70340b63-9fd2-443f-bdd0-2da933ba7b65" class="code"><code class="language-Verilog">module multi_acc
+	#(parameter size = 8)
+	(..);</code></pre><ul id="233990be-3f4f-4112-9c7d-27752a5fc1cf" class="bulleted-list"><li style="list-style-type:disc">Parameters can be floating parameters as well, they are defined as <strong>real parameters</strong></li></ul><h2 id="0627c797-f478-4b7f-bdf9-7b3168bf21de" class="">Instantiation Formats</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="242517e8-94d2-4b6a-900f-548a84e92c86" class="code"><code class="language-Markdown">&lt;component_name&gt; #&lt;delay&gt; &lt;instace_name&gt; (port_list);</code></pre><ul id="c509f670-988c-4610-a594-84c25fd84fe7" class="bulleted-list"><li style="list-style-type:disc">&lt;component_name&gt;<ul id="5e4cd7c3-448e-4f17-85c0-d0f889593292" class="bulleted-list"><li style="list-style-type:circle">The module name of your lower level component.</li></ul></li></ul><ul id="8f7111ed-d494-4ea9-9281-8ed96d4acc1b" class="bulleted-list"><li style="list-style-type:disc">#&lt;delay&gt;<ul id="849286a6-becb-4c85-af38-f10369961b4d" class="bulleted-list"><li style="list-style-type:circle">Delay through component</li></ul><ul id="5e0ba4bc-d737-44a4-9970-b3c5723afdc1" class="bulleted-list"><li style="list-style-type:circle">Optional</li></ul></li></ul><ul id="0d70e2ac-37d8-46fc-b636-035789d4244c" class="bulleted-list"><li style="list-style-type:disc">&lt;instance_name&gt;<ul id="e8eb58fc-eb05-4273-9d65-ee475647618b" class="bulleted-list"><li style="list-style-type:circle">Unique name applied to individual component.</li></ul></li></ul><ul id="3316bd22-c379-4909-9207-20f8ffbb7fcc" class="bulleted-list"><li style="list-style-type:disc">(port_list)<ul id="ac591090-ecde-4817-b0a3-5fd9fb363eda" class="bulleted-list"><li style="list-style-type:circle">List of signals to connect the component.</li></ul></li></ul><h3 id="927fb144-2da3-4949-a3b9-772fdf8033f1" class="">Connecting Module instantiation ports</h3><ul id="4eeff5ab-6daf-4fe3-88a1-c0c29bcf7c73" class="bulleted-list"><li style="list-style-type:disc">Two methods to define port connections</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="02287b88-3e6a-431b-adc9-8fec3215f670" class="code"><code class="language-Mermaid">graph TD
+  Instantiation_Methods --&gt; byOrderedList_or_positionalAssocation
+  Instantiation_Methods --&gt; byName_or_explicitAssocation
+  
+</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="df9d5bc9-acc2-4414-81e3-8d9b515c5ad2" class="code"><code class="language-Verilog">module half_adder(a, b, sum, cout);
+	input a, b;
+	output sum, cout;
+	
+	...
+	
+endmodule</code></pre><ol type="1" id="029d3878-d749-4e6d-af69-17436b430767" class="numbered-list" start="1"><li><strong>Positional Association</strong><ol type="a" id="6b132e79-7a7d-4be8-a20e-cbce7818fbaf" class="numbered-list" start="1"><li>Port connections defined by the order of the port list in the lower-level module declaration.</li></ol><ol type="a" id="521e16d7-f77d-4553-99f6-b122d1065238" class="numbered-list" start="2"><li>Order of the port connections does matter</li></ol></li></ol><ol type="1" id="b7268270-b682-46f6-ab23-7fdc573eaf17" class="numbered-list" start="2"><li><strong>Explicit Association</strong><ol type="a" id="32605578-0c1d-4689-88dc-a8f3d8ce3ac6" class="numbered-list" start="1"><li>Port connections defined by name.</li></ol><ol type="a" id="59e22118-9f06-4552-b7a8-9bb99a24edde" class="numbered-list" start="2"><li>Recommended method</li></ol><ol type="a" id="a158ecf3-6b28-4368-aa60-67e7c045e096" class="numbered-list" start="3"><li>Order of the port connections does not matter.</li></ol><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="54400c69-502b-485e-9c97-b0d4686fc773" class="code"><code class="language-Verilog">.&lt;signal_name&gt;(&lt;port_name&gt;)</code></pre></li></ol><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="56ae433c-54d0-4aaf-9abc-fa0e7d8e7694" class="code"><code class="language-Verilog">module full_adder(a, b, cin, sum, cout);
+	input a, b, cin;
+	output adder_sum, adder_cout;
+	wire c1, c2, s1;
+	
+	half_adder dut0(a, b, s1, c1); // Positional Association
+	half_adder dut1(.a(s1), .b(cin), .sum(adder_sum), .cout(c2)); 
+	// Explicit Association
+	or dut2(adder_cout, c1, c2); 
+	// &lt;basic_gate&gt; &lt;instance_name&gt;(output_ports, input_ports);
+endmodule</code></pre><figure id="b75cb8b8-7d5c-42ed-a329-1ac2535a4409" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image%207.png"><img style="width:389px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image%207.png"/></a></figure><h3 id="af39c11c-700b-4366-a497-b66bca756923" class="">Requirements for port connection when modules are instantiated</h3><figure id="7e47a803-5c54-41bc-9dfe-427d6599b978" class="image"><a href="Verilog%2098e244ae93ec44728f779bb24e669714/image%208.png"><img style="width:708px" src="Verilog%2098e244ae93ec44728f779bb24e669714/image%208.png"/></a><figcaption>Requirements for port connection when modules are instantiated</figcaption></figure><h2 id="b0398245-9cf5-45ce-add6-d5c2aa8f1f5c" class="">Assigning values - Numbers</h2><p id="8de96ea4-82a4-4ea8-ad72-0470be221a96" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
