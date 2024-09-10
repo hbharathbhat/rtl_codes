@@ -1,3 +1,4 @@
+#### You can find my Verilog notes here > <a href="https://hbharathbhat.github.io/verilog">Link</a>
 ### This repository contains a bunch of verilog codes
 
 1. Flip-flops
